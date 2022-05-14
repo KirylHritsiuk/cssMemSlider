@@ -1,5 +1,5 @@
 body {
-    font-size: 32px;
+    font-size: 2rem;
     color: antiquewhite;
     background: rgba(19, 24, 19, 0.932);
 } 
@@ -35,7 +35,7 @@ p {
 
 .slide { width: 27%; }
 
-img { border-radius: 20px;}
+img { border-radius: 2%;}
 
 /*========================================TEXT==============================================*/
 
@@ -57,41 +57,41 @@ img { border-radius: 20px;}
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    column-gap: 20px; 
+    column-gap: 1em; 
     padding-right: 1%; 
 }
 .button{
     background-color: aqua;
     border-radius: 50%;
-    border: 2px solid aqua;
-    width: 10px;
-    height: 10px;
+    border: 0.2rem solid aqua;
+    width: 0.6rem;
+    height: 0.6rem;
     cursor: pointer;
     transition: all 0.3s ease; 
 } 
 .button:focus{
     background: transparent;
-    border: 2px solid aqua;
+    border: 0.2rem solid aqua;
 } 
 .button:hover{
-    border: 2px solid #fff;
+    border: 0.2rem solid #fff;
     background: transparent;
 }
 .button:active {
-    border: 2px solid white;
+    border: 0.2rem solid white;
     background: white;
 }
 
 .navigation div{
-    width: 33px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
-    margin-left: -11px;
-    margin-top: -13px;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
 }
 .navigation div:hover .button{
     background: #fff;
-    border: 2px solid #fff;
+    border: 0.2rem solid #fff;
 }
 /*======================================ANIMATION=============================================*/
 #s1:checked ~.slider .slider_img,
