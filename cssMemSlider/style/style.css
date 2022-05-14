@@ -3,9 +3,9 @@ body {
     color: antiquewhite;
     background: rgba(19, 24, 19, 0.932);
 } 
-input{
-    display: none;
-}
+
+input { display: none;  }
+
 p {
     font-size: calc(1rem + 0.5vw);
     margin: 0;
@@ -21,6 +21,7 @@ p {
     width: 76.4%;  
 }
 /*======================================IMG================================================*/
+
 .slider{
     width: 100%;
     overflow: hidden;  
@@ -31,13 +32,13 @@ p {
     transition: all 0.2s linear;
 
 }
-.slide{
-    width: 27%; 
-}
-img{
-    border-radius: 20px;
-}
+
+.slide { width: 27%; }
+
+img { border-radius: 20px;}
+
 /*========================================TEXT==============================================*/
+
 .slider__titles{
     width: 70%;
     overflow: hidden;
@@ -47,9 +48,9 @@ img{
     width: 400%; 
     transition: all 0.2s linear;
 }
-.title{
-    width: 70%;
-}
+
+.title { width: 70%; }
+
 /*=========================================CONTROLS=============================================*/
 .navigation{
     height: 2rem;
