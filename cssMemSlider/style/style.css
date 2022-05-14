@@ -1,0 +1,124 @@
+body {
+    font-size: 32px;
+    color: antiquewhite;
+    background: rgba(19, 24, 19, 0.932);
+} 
+input{
+    display: none;
+}
+p {
+    font-size: calc(1rem + 0.5vw);
+    margin: 0;
+}
+/*=====================================================================================*/
+.container  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1rem;
+    margin: 0 auto;
+    padding: 3%;
+    width: 76.4%;  
+}
+/*======================================IMG================================================*/
+.slider{
+    width: 100%;
+    overflow: hidden;  
+}
+.slider_img{
+    display: flex;
+    width: 400%;
+    transition: all 0.2s linear;
+
+}
+.slide{
+    width: 27%; 
+}
+img{
+    border-radius: 20px;
+}
+/*========================================TEXT==============================================*/
+.slider__titles{
+    width: 70%;
+    overflow: hidden;
+}
+.titles{
+    display: flex;
+    width: 400%; 
+    transition: all 0.2s linear;
+}
+.title{
+    width: 100%;
+}
+/*=========================================CONTROLS=============================================*/
+.navigation{
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 20px; 
+    padding-right: 1%; 
+}
+.button{
+    background-color: aqua;
+    border-radius: 50%;
+    border: 2px solid aqua;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease; 
+} 
+.button:focus{
+    background: transparent;
+    border: 2px solid aqua;
+} 
+.button:hover{
+    border: 2px solid #fff;
+    background: transparent;
+}
+.button:active {
+    border: 2px solid white;
+    background: white;
+}
+
+.navigation div{
+    width: 33px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: -11px;
+    margin-top: -13px;
+}
+.navigation div:hover .button{
+    background: #fff;
+    border: 2px solid #fff;
+}
+/*======================================ANIMATION=============================================*/
+#s1:checked ~.slider .slider_img,
+#s1:checked ~.slider__titles .titles{
+    transform: translateX(0);
+}
+#s2:checked ~.slider .slider_img,
+#s2:checked ~.slider__titles .titles{
+    transform: translateX(-25%);
+}
+#s3:checked ~.slider .slider_img,
+#s3:checked ~.slider__titles .titles{
+    transform: translateX(-50%);
+}
+#s4:checked ~.slider .slider_img,
+#s4:checked ~.slider__titles .titles{
+    transform: translateX(-75%);
+}
+/*=====================================MEDIA=================================================*/
+@media (max-width: 767px) {
+  .slider__titles{
+        width: 100%;
+        order: 3;
+         }
+  .navigation{
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+  }
+}
+
