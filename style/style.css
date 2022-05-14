@@ -10,8 +10,8 @@ p {
     font-size: calc(1rem + 0.5vw);
     margin: 0;
 }
+/*=====================================================================================*/
 .container  {
-   
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -20,6 +20,7 @@ p {
     padding: 3%;
     width: 76.4%;  
 }
+/*======================================IMG================================================*/
 .slider{
     width: 100%;
     overflow: hidden;  
@@ -33,31 +34,30 @@ p {
 .slide{
     width: 27%; 
 }
-
-
-.titles{
-    display: flex;
-    width: 572%; 
-    transition: all 0.2s linear;
-}
-
 img{
     border-radius: 20px;
 }
-
+/*========================================TEXT==============================================*/
 .slider__titles{
     width: 70%;
     overflow: hidden;
 }
-.title{
-    width: 25%;
+.titles{
+    display: flex;
+    width: 400%; 
+    transition: all 0.2s linear;
 }
+.title{
+    width: 100%;
+}
+/*=========================================CONTROLS=============================================*/
 .navigation{
-    height: 40px;
+    height: 2rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    column-gap: 20px;  
+    column-gap: 20px; 
+    padding-right: 1%; 
 }
 .button{
     background-color: aqua;
@@ -80,18 +80,19 @@ img{
     border: 2px solid white;
     background: white;
 }
+
 .navigation div{
-    width: 40px;
+    width: 33px;
     height: 40px;
     cursor: pointer;
-    margin-left: -10px;
+    margin-left: -11px;
+    margin-top: -13px;
 }
 .navigation div:hover .button{
     background: #fff;
     border: 2px solid #fff;
 }
-
-
+/*======================================ANIMATION=============================================*/
 #s1:checked ~.slider .slider_img,
 #s1:checked ~.slider__titles .titles{
     transform: translateX(0);
@@ -108,14 +109,16 @@ img{
 #s4:checked ~.slider__titles .titles{
     transform: translateX(-75%);
 }
-
-
-@media (max-width: 480px) {
-    .navigation{
-        justify-content: center;
-    }
-    img {
-        height: auto;
-    }
+/*=====================================MEDIA=================================================*/
+@media (max-width: 767px) {
+  .slider__titles{
+        width: 100%;
+        order: 3;
+         }
+  .navigation{
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+  }
 }
 
