@@ -81,14 +81,14 @@ img{
     background: white;
 }
 
-.navigation div{
+.btnarea { 
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     margin-left: -0.5rem;
     margin-top: -0.5rem;
 }
-.navigation div:hover .button{
+.btnarea:hover .button{
     background: #fff;
     border: 0.2rem solid #fff;
 }
@@ -109,6 +109,12 @@ img{
 #s4:checked ~.slider__titles .titles{
     transform: translateX(-75%);
 }
+input:nth-child(1):checked ~.navigation .button:nth-child(1),
+input:nth-child(2):checked ~.navigation .button:nth-child(2),
+input:nth-child(3):checked ~.navigation .button:nth-child(3),
+input:nth-child(4):checked ~.navigation .button:nth-child(4){
+    background: transparent;
+} 
 /*=====================================MEDIA=================================================*/
 @media (max-width: 767px) {
   .slider__titles{
