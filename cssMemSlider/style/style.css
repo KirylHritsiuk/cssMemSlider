@@ -1,0 +1,131 @@
+body {
+    font-size: 2rem;
+    color: antiquewhite;
+    background: rgba(19, 24, 19, 0.932);
+} 
+
+input { display: none;  }
+
+p {
+    font-size: calc(1rem + 0.5vw);
+    margin: 0;
+}
+/*=====================================================================================*/
+.container  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1rem;
+    margin: 0 auto;
+    padding: 3%;
+    width: 76.4%;  
+}
+/*======================================IMG================================================*/
+
+.slider{
+    width: 100%;
+    overflow: hidden;  
+}
+.slider_img{
+    display: flex;
+    width: 400%;
+    transition: all 0.2s linear;
+
+}
+
+.slide { width: 27%; }
+
+img { border-radius: 2%;}
+
+/*========================================TEXT==============================================*/
+
+.slider__titles{
+    width: 70%;
+    overflow: hidden;
+}
+.titles{
+    display: flex;
+    width: 400%; 
+    transition: all 0.2s linear;
+}
+
+.title { width: 70%; }
+
+/*=========================================CONTROLS=============================================*/
+.navigation{
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1em; 
+    padding-right: 1%; 
+}
+.button{
+    background-color: aqua;
+    border-radius: 50%;
+    border: 0.2rem solid aqua;
+    width: 0.6rem;
+    height: 0.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+} 
+.button:focus{
+    background: transparent;
+    border: 0.2rem solid aqua;
+} 
+.button:hover{
+    border: 0.2rem solid #fff;
+    background: transparent;
+}
+.button:active {
+    border: 0.2rem solid white;
+    background: white;
+}
+
+.btnarea{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+}
+.btnarea:hover .button{
+    background: #fff;
+    border: 0.2rem solid #fff;
+}
+/*======================================ANIMATION=============================================*/
+#s1:checked ~.slider .slider_img,
+#s1:checked ~.slider__titles .titles{
+    transform: translateX(0);
+}
+#s2:checked ~.slider .slider_img,
+#s2:checked ~.slider__titles .titles{
+    transform: translateX(-25%);
+}
+#s3:checked ~.slider .slider_img,
+#s3:checked ~.slider__titles .titles{
+    transform: translateX(-50%);
+}
+#s4:checked ~.slider .slider_img,
+#s4:checked ~.slider__titles .titles{
+    transform: translateX(-75%);
+}
+input:nth-child(1):checked ~.navigation .button:nth-child(1),
+input:nth-child(2):checked ~.navigation .button:nth-child(2),
+input:nth-child(3):checked ~.navigation .button:nth-child(3),
+input:nth-child(4):checked ~.navigation .button:nth-child(4){
+    background: transparent;
+}
+/*=====================================MEDIA=================================================*/
+@media (max-width: 767px) {
+  .slider__titles{
+        width: 100%;
+        order: 3;
+         }
+  .navigation{
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+  }
+}
+
