@@ -82,14 +82,14 @@ img { border-radius: 2%;}
     background: white;
 }
 
-.navigation div{
+.btnarea{
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     margin-left: -0.5rem;
     margin-top: -0.5rem;
 }
-.navigation div:hover .button{
+.btnarea:hover .button{
     background: #fff;
     border: 0.2rem solid #fff;
 }
